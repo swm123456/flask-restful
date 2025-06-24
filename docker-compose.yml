@@ -8,6 +8,8 @@ services:
       - 5000:5000
     depends_on:
       - database
+    environment:
+      - PYTHONPATH=/home/myuser/code
 
   database:
     image: postgres:latest # use latest official postgres version
