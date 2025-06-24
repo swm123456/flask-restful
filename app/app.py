@@ -21,11 +21,11 @@ jwt = JWTManager(app)
 api = Api(app)
 
 
-@app.before_first_request
-def create_tables():
-    from app.db import db
-    db.init_app(app)
-    db.create_all()
+# @app.before_first_request
+# def create_tables():
+#     from app.db import db
+#     db.init_app(app)
+#     db.create_all()
 
 
 # jwt = JWT(app, authenticate, identity)  # Auto Creates /auth endpoint
