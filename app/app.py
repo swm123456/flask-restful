@@ -21,7 +21,7 @@ jwt = JWTManager(app)
 api = Api(app)
 
 
-# @app.before_first_request
+@app.before_first_request
 def create_tables():
     from app.db import db
     db.init_app(app)
